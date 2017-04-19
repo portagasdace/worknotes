@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="checkbox" value="足球">
+	<label for="">最求</label>
+	<button>点击获取</button>
+	<script src="../js/jquery.min.js"></script>
+	<script>
+		$("button").click(function(){
+			var check=$("input").is(":checked")
+			console.log(check)
+			if(check==true){
+				var text=$("input").next().text()
+				console.log(text)
+			}
+		})	
+	</script>
+</body>
+</html>

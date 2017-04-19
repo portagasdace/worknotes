@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<select name="" id="select">
+		<option value="">国家</option>
+		<option value="">中国</option>
+		<option value="">韩国</option>
+		<option value="">美国</option>
+		<option value="">英国</option>
+	</select>
+	<script src="../js/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#select").change(function(){
+				selectchange();
+			})
+			function selectchange(){
+				var text=$("select").find("option:selected").text();
+				console.log(text)
+			}
+		})
+	</script>
+</body>
+</html>
