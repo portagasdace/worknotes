@@ -54,3 +54,9 @@ UI框架 : http://element.eleme.io
             <li><i class="fa fa-wrench fa-fw"></i></li>
         </ul>
     </body>
+
+#### 匿名函数
+
+(function(){})表示一个匿名函数。function(arg){...}定义了一个参数为arg的匿名函数，然后使用(function(arg){...})(param)来调用这个匿名函数。其中param是传入这个匿名函数的参数。
+
+需要注意与$(function(){})的区别：$(function(){}) 是 $(document).ready(function(){}) 的简写，用来在DOM加载完成之后执行一系列预先定义好的函数。

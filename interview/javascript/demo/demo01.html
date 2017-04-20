@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		console.log(!!(0==null)); /*输出 false */
+		console.log(undefined==null); /*输出 true */
+		console.log(isNaN("1231")==NaN); /*输出 false */
+		console.log(typeof []); /*输出对象*/
+		(function (){
+			var a=b=5
+
+		})()
+		console.log(b)/*输出5*/
+		console.log(a)/*未定义*/
+	</script>
+</body>
+</html>
