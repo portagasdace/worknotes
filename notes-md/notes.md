@@ -40,7 +40,7 @@ UI框架 : http://element.eleme.io
                 var text=$("input").next().text()
                 console.log(text)
             }
-        })  
+        }） 
     </script>
 
 #### 暂无笔记
