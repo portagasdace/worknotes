@@ -43,4 +43,14 @@ UI框架 : http://element.eleme.io
         }） 
     </script>
 
-#### 暂无笔记
+#### 页面小图标显示
+
+    <link rel="stylesheet" href="style/Font-Awesome-master/css/font-awesome.min.css">
+
+    <body>
+        <ul>
+            <li><i class="fa fa-wrench fa-fw"></i></li>
+            <li><i class="fa fa-wrench fa-fw"></i></li>
+            <li><i class="fa fa-wrench fa-fw"></i></li>
+        </ul>
+    </body>
