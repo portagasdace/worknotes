@@ -62,7 +62,7 @@
 
 ### 模板指令
 
-##### v-html,v-text 数据渲染
+#### v-html,v-text 数据渲染
 
     <h1 v-html="a"></h1>
     <h1 v-text="a"></h1>
@@ -73,7 +73,7 @@
         }    
     })
 
-##### v-if,v-show 控制模块隐藏
+#### v-if,v-show 控制模块隐藏
 
     <p v-if="isShow"></p>
     <p v-show="isShow"></p>
@@ -84,7 +84,7 @@
         }
     }
 
-##### v-for 渲染循环列表
+#### v-for 渲染循环列表
 
     <ul>
         <li v-for="item in items">
@@ -107,3 +107,15 @@
     }
     
 
+#### v-on 事件绑定
+
+    <button v-on:click="doThis"></button>
+    <button @click="doThis"></button>
+    
+    methods:{
+        doThis:function(someThing){
+            console.log("Hello vue")
+        }
+    }
+
+#### v-bind 属性绑定
