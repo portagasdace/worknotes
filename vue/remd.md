@@ -63,13 +63,13 @@
 ### 模板指令
 + v-html,v-text 数据渲染
 + v-if,v-show 控制模块隐藏
-    <p v-if="isShow"></p>
-    <p v-show="isShow"></p>
-    new Vue{
-        data:{
-            isShow:true
-        }
-    }
+        *<p v-if="isShow"></p>
+        <p v-show="isShow"></p>
+        new Vue{
+            data:{
+                isShow:true
+            }
+        }*
 + v-for 渲染循环列表
     <ul>
         <li v-for="item in items">
