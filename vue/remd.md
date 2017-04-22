@@ -25,4 +25,10 @@
 - 浏览器锁死：等待服务端的响应
 - 渲染服服务端响应的数据内容
 
-### 暂无内容
+### Vue 环境搭建
++ $ npm install -g vue-cli(可以用淘宝镜像会更快)
++ $ vue init webpack my-project(创建项目)
++ <!-- 安装依赖，走你 -->
++ $ cd my-project
++ $ npm install
++ $ npm run dev
