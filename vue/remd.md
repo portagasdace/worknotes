@@ -59,3 +59,40 @@
 + new 一个 Vue 对象的时候可以设置他的属性，其中最重要的包括三个，分别是 data,methods,watch
     - data代表 Vue 对象的数据，methods 代表 Vue 对象的方法，watch 设置了对象监听的方法。
 + Vue 对象里的设置通过 html 指令进行关联。
+
+### 模板指令
++ v-html,v-text 数据渲染
++ v-if,v-show 控制模块隐藏
+
+<p v-if="isShow"></p>
+<p v-show="isShow"></p>
+
+new Vue{
+    data:{
+        isShow:true
+    }
+}
+
++ v-for 渲染循环列表
+
+<ul>
+    <li v-for="item in items">
+        <p v-text=item.label></p>
+    </li>
+</ul>
+
+data:{
+    items:[
+        {
+            label:"苹果"
+        },
+        {
+            label:"鸭梨"
+        },
+        {
+            label:"香蕉"
+        },
+    ]      
+}
+    
+
