@@ -26,9 +26,36 @@
 - 渲染服服务端响应的数据内容
 
 ### Vue 环境搭建
+
 + $ npm install -g vue-cli(可以用淘宝镜像会更快)
 + $ vue init webpack my-project(创建项目)
     - 安装依赖，走你
 + $ cd my-project
 + $ npm install
 + $ npm run dev
+
+### Vue.js 组件
+
+    new Vue({
+        <!-- 数据 -->
+        data:{
+            a:1
+            b:[]
+        },
+        <!-- 方法 -->
+        methods:{
+            dosomeing:function(){
+                this.a++
+            }
+        },
+        <!-- 监听 -->
+        watch:{
+            "a":function(val,oldval){
+                console.log(val,oldval)
+            }
+        }
+    })
+
++ new 一个 Vue 对象的时候可以设置他的属性，其中最重要的包括三个，分别是 data,methods,watch
+    - data代表 Vue 对象的数据，methods 代表 Vue 对象的方法，watch 设置了对象监听的方法。
++ Vue 对象里的设置通过 html 指令进行关联。
