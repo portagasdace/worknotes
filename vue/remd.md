@@ -62,6 +62,12 @@
 
 ### 模板指令
 
++ 重要的指令包括
+    - v-text 渲染数据
+    - v-if 控制显示
+    - v-on 绑定事件
+    - v-for 循环渲染 等
+
 #### v-html,v-text 数据渲染
 
     <h1 v-html="a"></h1>
@@ -119,3 +125,8 @@
     }
 
 #### v-bind 属性绑定
+
+    <img v-bind:src="imagesrc">
+    <div :class="{red:isRed}"></div><!-- isRed值为true才显示class的值为red isRed为布尔值-->
+    <div :class="[classA,classB]"></div><!-- 以字符串形式显示赋什么值就显示什么 -->
+    <div :class="[classA,{classB:isClassB,classC:isCalssC}]"></div>
