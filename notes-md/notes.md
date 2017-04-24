@@ -61,4 +61,23 @@ UI框架 : http://element.eleme.io
 
 + 需要注意与$(function(){})的区别：$(function(){}) 是 $(document).ready(function(){}) 的简写，用来在DOM加载完成之后执行一系列预先定义好的函数。
 
-#### 暂无
+#### checkbox 全选
+
+    <input type="text">海贼
+    <input type="text">火影
+    <input type="text">死神
+    <input type="text">妖尾
+    <input type="text" id="chkSelected" onclick="GetCheck(this)"><button>全选</button>
+    
+    <script src="jquery.js"></script>
+    <script>
+        function GetCheck(check){
+            var item=$("input")
+            for(var i=0;i<item.length;i++){
+                if(item.type="checkbox"){
+                    item[i].checked=check.checked
+                }
+            }
+        }
+    </script>
+
