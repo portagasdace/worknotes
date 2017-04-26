@@ -130,3 +130,52 @@
     <div :class="{red:isRed}"></div><!-- isRed值为true才显示class的值为red isRed为布尔值-->
     <div :class="[classA,classB]"></div><!-- 以字符串形式显示赋什么值就显示什么 -->
     <div :class="[classA,{classB:isClassB,classC:isCalssC}]"></div>
+
+#### Vue 引用的模块
+
+##### 主要模块
+
+    import Vue from 'vue';
+
+##### 设置路由用的模块
+
+    import VueRouter from 'vue-router';
+    
+    Vue.use(VueRouter);<!-- 运用这个模块 -->
+
+    const router = new VueRouter({
+        routes:[
+            {path:'/',name: 'Home',component:Home},
+            {path:'/login',name: 'Login',component:Login},
+            {path:'/movie',name: 'Movie',component:Movie},
+            {path:'/videos',name: 'Videos',component:Videos}
+        ]
+    })
+    
+    new Vue({
+        el:'#app',
+        components:{App},
+        router
+    })
+
+
+
+        export default new Router({
+          routes: [
+            {
+              path: '/',
+              name: 'Hello',
+              component: Hello
+            },
+            {
+              path: '/movie',
+              name: 'movie',
+              component: movie
+            },
+            {
+              path: '/videos',
+              name: 'Videos',
+              component: Videos
+            },
+          ]
+    })
