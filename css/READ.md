@@ -21,7 +21,7 @@
 
     <input type="text"  placeholder="输入用户名">
     <input type="text" class="text1" placeholder="输入密码">
-
+    
     <style type="text/css">
         ::-webkit-input-placeholder{
             color: #000;
@@ -34,4 +34,11 @@
             line-height: 50px;
         }
     </style>
+
+#### 取消 bootstrap input点击之会出现蓝色边框
+    input{
+        outline:none;
+        box-shadow:none;
+    }
+    <!--要覆盖bootstrap里的样式  -->
 
