@@ -17,3 +17,21 @@
     }
     </style>
 
+#### 更改placeholder默认字体大小和颜色
+
+    <input type="text"  placeholder="输入用户名">
+    <input type="text" class="text1" placeholder="输入密码">
+
+    <style type="text/css">
+        ::-webkit-input-placeholder{
+            color: #000;
+            font-size: 20px;
+           line-height: 50px;
+        }
+        .text1::-webkit-input-placeholder{
+            color: red;
+            font-size: 20px;
+            line-height: 50px;
+        }
+    </style>
+
