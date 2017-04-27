@@ -30,4 +30,18 @@
       });
     </script> 
 
-#### 暂无笔记
+#### 未勾选input屏蔽按钮勾选可以点击按钮
+    <input name="checkbox"  type="checkbox" value="0">
+    <input name="checkbox"  type="checkbox" value="1">
+    <button class="biaoji btn btn-warning">标记为已缴费</button>
+
+    $(".btn-warning").attr("disabled","disabled")
+    $("input").change(function(){
+            var check=$("input[type='checkbox']").is(":checked")
+            console.log(check)
+            if(check==true){
+                $(".btn-warning").attr("disabled",false)
+            }else{
+                $(".btn-warning").attr("disabled","disabled")
+            }   
+    })
