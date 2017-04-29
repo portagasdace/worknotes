@@ -42,3 +42,35 @@
     }
     <!--要覆盖bootstrap里的样式  -->
 
+#### ul 垂直居中div
+
+    div class="box">
+      <ul>
+        <li>15</li>
+        <li>13</li>
+        <li>21</li>
+        <li>45</li>
+      </ul>
+    </div> 
+
+    <style type="text/css">
+      .box{
+        width: 100%;
+        height: 80px;
+        background-color: red;
+      }
+      ul{ display: table;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        *{
+          margin: 0px;
+          padding: 0px;
+        }
+        li{
+          list-style: none;
+          float: left;
+          margin-right: 20px;
+        }
+    </style> 
+
