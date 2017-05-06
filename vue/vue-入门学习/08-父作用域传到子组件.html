@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="app">
+		<ol>
+			<todo-item v-for="list in lists" v-bind:todo="list"></todo-item>
+		</ol>
+	</div>
+	<script src="js/vue.js"></script>
+	<script>
+		Vue.component("todo-item", {
+			props:["todo"],
+			template:"<li>{{ todo.text }}</li>"
+		})
+		var app=new Vue({
+			el:"#app",
+			data:{
+				lists:[
+					{text:"hello 1"},
+					{text:"hello 2"},
+					{text:"hello 3"}
+				]
+			}
+		})
+	</script>
+</body>
+</html>

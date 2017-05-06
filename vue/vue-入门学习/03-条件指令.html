@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="app">
+		<h1 v-if="seen">Hello vue !</h1>
+	</div>
+	<script src="js/vue.js"></script>
+	<script>
+		var app=new　Vue({
+			el:"#app",
+			data:{
+				seen:false
+				// seen:true
+			}
+		})
+	</script>
+</body>
+</html>

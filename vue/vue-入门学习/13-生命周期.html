@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="app">
+		<p>{{a}}</p>
+	</div>
+	<script src="js/vue.js"></script>
+	<script>
+		/*实例也会调用一些 生命周期钩子 ，created 这个钩子在实例被创建之后被调用*/
+		var app=new Vue({
+			el:"#app",
+			data:{
+				a:1
+			},
+			created:function(){
+				console.log("a is:"+ this.a)
+			}
+		})
+		/*也有一些其它的钩子，在实例生命周期的不同阶段调用，如 mounted、 updated 、destroyed 。钩子的 this 指向调用它的 Vue 实例。*/
+	</script>
+</body>
+</html>
