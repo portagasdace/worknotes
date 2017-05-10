@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="app">
+	<!-- v-bind 指令被用来响应地更新 HTML 属性 -->
+		<p v-bind:title="p">{{message}}</p>
+		<!-- title 是参数，告知 v-bind 指令将该元素的 href 属性与表达式 p 的值绑定。 -->
+	<!-- v-on 指令，它用于监听 DOM 事件： -->
+		<button v-on:click="dosomesing">点击</button>
+	</div>
+	<script src="js/vue.js"></script>
+	<script>
+		var app=new Vue({
+			el:"#app",
+			data:{
+				p:"haha",
+				message:"hello vue"
+			},
+			methods:{
+				dosomesing:function () {
+					alert("do somesing")
+				}
+			}
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="app">
+		<h1>{{message}}</h1>
+		<p>Original message:"{{message}}"</p>
+		<!-- 声明了一个计算属性 reversedMessage -->
+		<p>Computed reversed message:"{{reversedMessage}}"</p>
+	</div>
+	<script src="js/vue.js"></script>
+	<script>
+		var app=new Vue({
+			el:"#app",
+			data:{
+				message:"hello vue"
+			},
+			computed:{
+				reversedMessage:function(){
+					return this.message +"haha"
+				}
+			}
+		})
+		app.message="akq"
+		// 可以像绑定普通属性一样在模板中绑定计算属性。 Vue 知道 app.reversedMessage 依赖于 app.message ，因此当 app.message 发生改变时，所有依赖于 app.reversedMessage 的绑定也会更新。
+	</script>
+</body>
+</html>

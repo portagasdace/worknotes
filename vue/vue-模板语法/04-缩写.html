@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="app">
+	<!-- v-bind 缩写-->
+		<!-- 完整写法 -->
+		<a v-bind:href="url0">0</a>
+		<!-- 缩写 -->
+		<a :href="url1">1</a>
+	<!-- v-on 的缩写 -->
+		<!-- 完整写法 -->
+		<button v-on:click="dosomething">点击0</button>
+		<!-- 缩写 -->
+		<button @click="doSomething">点击1</button>
+	</div>
+	<script src="js/vue.js"></script>
+	<script>
+		var app=new Vue({
+			el:"#app",
+			data:{
+				url0:"http://www.baidu.com",
+				url1:"http://www.sina.com"
+			},
+			methods:{
+				dosomething:function(){
+					alert("完整的写法")
+				},
+				doSomething:function(){
+					alert("缩写")
+				}
+			}
+		})
+	</script>
+</body>
+</html>

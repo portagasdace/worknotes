@@ -179,3 +179,104 @@
             },
           ]
     })
+
+#### vue过滤器
+
+##### 自定义过滤器放在vue实例前
+
+    <div id="app">
+        <p>{{message | sum}}</p>
+    <div>
+    <script src="js/vue.js"></script>
+    <script>
+    
+        //全局方法 Vue.filter() 注册一个自定义过滤器,必须放在Vue实例化前面
+    
+        Vue.filter("sum", function(value) {  
+            return value + 4;
+        });
+    
+        var vue=new Vue({
+        el:"#app",
+        data:{
+            message:2
+        }
+    })
+    
+    </script>
+
+##### 过滤器函数
+
+    <div id="app">
+        <!-- 过滤器函数始终以表达式的值作为第一个参数。括号里边带引号的参数视为字符串，而不带引号的参数按表达式计算。 -->
+        <p>{{message | cal(10,20)}}</p>
+    <div>
+    <script src="js/vue.js"></script>
+    <script>
+    
+        Vue.filter("cal", function (value, begin, xing) {  
+            return value + begin + xing;
+        });
+    
+        var vue=new Vue({
+        el:"#app",
+        data:{
+            message:2
+        }
+    })
+    
+    </script>
+
+##### 串联过滤器
+
+    <div id="app">
+        <!-- 添加两个过滤器,注意不要冲突 -->
+       <p>{{message | sum | currency }}</p>
+    <div>
+    <script src="js/vue.js"></script>
+    <script>
+        <!-- 先执行第一个过滤器在执行第二个过滤器 -->
+        Vue.filter("sum", function(value) { 
+            return value + 4;
+        });
+    
+        Vue.filter("currency", function(value) {   
+            return value -6;
+        });
+    
+        var vue=new Vue({
+        el:"#app",
+        data:{
+            message:2
+        }
+    })
+    
+    </script>
+
+##### 自定义过滤器放在vue实例内
+
+    <div id="app">
+        <p>{{message | sum}}</p>
+        <p>{{message | cal(10,20)}}</p>
+        <p>{{message | sum | currency }}</p>
+    <div>
+    <script src="js/vue.js"></script>
+    <script>
+        var vue=new Vue({
+        el:"#app",
+        data:{
+            message:2
+        },
+        filters:{
+            sum: function (value) {
+                return value + 4;
+            },
+            cal: function (value, begin, xing) {
+                return value + begin + xing;
+            },
+            currency:function(value){
+                return value -6;
+            }
+        }
+    </script>
+

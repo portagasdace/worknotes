@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- 指令（Directives）是带有 v- 前缀的特殊属性。 -->
+	<div id="app">
+		<!-- 指令的职责就是当其表达式的值改变时相应地将某些行为应用到 DOM 上。 -->
+		<p v-if="seen">Hello vue.js！</p>
+	</div>
+	<script src="js/vue.js"></script>
+	<script>
+		var vue =new Vue({
+			el:"#app",
+			data:{
+				// seen:true
+				seen:false
+				 // v-if 指令将根据表达式 seen 的值的真假来移除/插入 <p> 元素。
+			}
+		})
+	</script>
+</body>
+</html>
