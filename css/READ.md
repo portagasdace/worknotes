@@ -72,5 +72,17 @@
           float: left;
           margin-right: 20px;
         }
-    </style> 
+    </style>
 
+#### 背景图片充满盒子
+
+    <div class="box">
+      
+    </div>
+    <style>
+      .box{
+        background-image: url("../img/pc.jpg");
+        background-size:cover;
+        background-repeat: no-repeat;
+      }
+    </style>

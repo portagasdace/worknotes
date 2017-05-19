@@ -16,6 +16,7 @@
 			data:{
 				message:"keke"
 			},
+			// 我们可以将同一函数定义为一个 method 而不是一个计算属性。对于最终的结果，两种方式确实是相同的。然而，不同的是计算属性是基于它们的依赖进行缓存的。
 			methods:{
 				reversedMessage:function(){
 					return this.message + "hello vue !";
