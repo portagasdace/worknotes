@@ -28,20 +28,21 @@ UI框架 : http://element.eleme.io
 
 #### 获取checkbox被勾选的值 
 
-    <input type="checkbox" value="足球">
-    <label for="">最求</label>
+    <input type="checkbox" name="check" value="足球">
+    <input type="checkbox" name="check" value="1">
+    <input type="checkbox" name="check" value="3">
+    <input type="checkbox" name="check" value="4">
     <button>点击获取</button>
     <script src="../js/jquery.min.js"></script>
     <script>
-        $("button").click(function(){
-            var check=$("input").is(":checked")
-            console.log(check)
-            if(check==true){
-                var text=$("input").next().text()
-                console.log(text)
-            }
-        }） 
-    </script>
+    $("button").click(function(){
+        var arr=[] 
+        $('input[name="check"]:checked').each(function(){
+            arr.push($(this).val())
+             
+        })
+        console.log(arr)
+    })
 
 #### 页面小图标显示
 
