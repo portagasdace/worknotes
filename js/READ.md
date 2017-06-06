@@ -45,4 +45,16 @@
             }else{
                 $(".btn-warning").attr("disabled","disabled")
             }   
-    })
+    }) 
+
+#### 判断盒子里是否有标签
+
+    if($("div.wei-name:has(span)").length){
+    
+    }
+
+    
+
+
+
+
