@@ -82,3 +82,69 @@ UI框架 : http://element.eleme.io
         }
     </script>
 
+#### less
+
++ 用less之前先要配置好gulp和gulpfile.js文件
++ less支持多行和单行注释
++ less用@定义变量，可分全局变量和局部变量
+
+##### less混合混入（mixin）
+
+    .box{
+      width:100px;
+      height:100px;          
+    }
+    .Bigbox{
+        .box;
+    }
+    <!-- 可以穿参数 待参数的不会编译成css-->
+    .box(@val){
+        width:@val;
+        height:@val;
+    }
+    .Bigbox{
+        .box(200px);
+    }
+     <!-- 给参数设至默认值-->
+    .box(@val:300px){
+        width:@val;
+        height:@val;
+    }
+    .Bigbox{
+        .box;
+    }
+    <!-- 可将参数默认值覆盖-->
+    .Bigbox{
+        .box(600px);
+    }
+
+##### 常用在css3设置浏览器兼容
+    
+    .radios(@val:10px){
+        -webkit-border-radius:@val;
+        -moz-border-radius:@val;
+        border-radius:@val;
+    }
+    .span{
+        .radius;
+    }
+
+##### less嵌套
+
+    ul{
+        list-style:none;
+        li{
+            width:100px;
+            height:30px;
+            line-height:30px;
+            text-align:center;
+            float:left;
+            a{
+                text-decoration: none;
+            }
+            &:hover{
+                background-color:green;
+            }
+        }
+    }
+
