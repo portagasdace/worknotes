@@ -1,5 +1,29 @@
 # CSS笔记
 
+#### css引入方式
+
++ 行内样式：写在style属性里
++ 内嵌式：嵌入式是将CSS样式集中写在网页的<head></head>标签对的<style></style>标签对中。
+<head>
+
+<style type="text/css">
+
+...此处写CSS样式
+
+</style>
+
+</head>
+
++ 导入式：将一个独立的.css文件引入HTML文件中，导入式使用CSS规则引入外部CSS文件，<style>标记也是写在<head>标记中，使用的语法如下：
+
+<style type="text/css">
+
+@import"mystyle.css"; 此处要注意.css文件的路径
+
+</style>
++ 链接式：使用<link>标记来引入外部样式表文件，使用语法如下：
+<link href="mystyle.css" rel="stylesheet" type="text/css"/>
+
 #### 垂直居中
 
     <div class="box"></div>
