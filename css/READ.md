@@ -1,5 +1,15 @@
 # CSS笔记
 
+#### css声明方式
+
++ HTML选择器，即HTML标签，div，p，body......。
++ class选择器，在HTML标签中自定义的，css中定义其属性前边要加“.”。
++ id选择器，也在HTML标签中自定义的，但css中定义其属性前边要加“#”。
+
+#### css盒模型
+
+  想象一个盒子，它有：外边距（margin）、边框（border）、内边距（padding）、内容（content）四个属性；
+
 #### css引入方式
 
 + 行内样式：写在style属性里
