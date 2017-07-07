@@ -22,8 +22,9 @@
 
   </style>
 
-+ 链接式：使用<link>标记来引入外部样式表文件，使用语法如下：(<link href="mystyle.css" rel="stylesheet" type="text/css"/>)
++ 链接式：也是将一个.css文件引入到HTML文件中，但它与导入式不同的是链接式使用HTML规则引入外部CSS文件，它在网页的<head></head>标签对中使用<link>标记来引入外部样式表文件，使用语法如下：
 
+<link href="mystyle.css" rel="stylesheet" type="text/css"/>
 #### 垂直居中
 
     <div class="box"></div>
