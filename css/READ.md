@@ -22,7 +22,8 @@
 
   </style>
 + 链接式：使用<link>标记来引入外部样式表文件，使用语法如下：
-  - <link href="mystyle.css" rel="stylesheet" type="text/css"/>
+
+  <link href="mystyle.css" rel="stylesheet" type="text/css"/>
 
 #### 垂直居中
 
