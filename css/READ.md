@@ -3,17 +3,26 @@
 #### 垂直居中
 
     <div class="box"></div>
-    
     <style type="text/css">
     .box{
       width: 500px;      
       height: 500px;
-        
       margin: auto;  
       position: absolute;  
       top: 0; left: 0; bottom: 0; right: 0; 
     
       background-color: red;
+    }
+    </style>
+    <style type="text/css">
+    .box{
+      width:100px;
+      height:100px;
+      position: absolute;  
+      top: 50%; 
+      left: 50%; 
+      background-color: red;
+      transform:translate(-50%,-50%)
     }
     </style>
 

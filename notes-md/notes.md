@@ -148,3 +148,20 @@ UI框架 : http://element.eleme.io
         }
     }
 
+##### 元素分类
+
++ 行内元素
+    - 不独立成行,可以设置宽高
++ 块级元素
+    - 独立成行,不可以设置宽高
++ 行内块元素
+    - 不独立成行,可以设置宽高
+
+##### 定位
+
++ 如果没有position属性，top，left，bottom，right属性不起作用
+    - position: absolute;不占位；脱离文档流 -->
+    - position: absolute;如果父级元素有position: relative那么参照这个元素，否则参照body
+    - position: relative;相对定位，占位，定位参照原来的位置 -->
+    - position: fixed;固定定位，参照浏览器窗口，不占位 -->
+
