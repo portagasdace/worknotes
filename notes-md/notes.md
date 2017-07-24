@@ -118,6 +118,17 @@ UI框架 : http://element.eleme.io
         .box(600px);
     }
 
+##### 浏览器内核及兼容问题
+
++ Trident内核
+    IE浏览器、猎豹浏览器、360浏览器等
++ Gecko内核
+    Mozilla FireFox(火狐浏览器)
++ Presto内核
+    Opera 欧鹏浏览器
++ Webkit内核
+    Chrome谷歌浏览器、苹果的Safari浏览器
+
 ##### 常用在css3设置浏览器兼容
     
     .radios(@val:10px){

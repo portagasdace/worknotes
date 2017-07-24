@@ -63,3 +63,43 @@
             $scope.heros=["钢铁侠","路飞","山治","娜美","索隆"]
           }) 
     </script>
+
+###### 请求数据$http
+
+    <div ng-controller="mytrl">
+      <h1>{{data}}</h1>
+    </div>
+    <script src="script/angular.js"></script>
+    <script>
+      var myapp=angular.module("app",[]); 
+      myapp.controller("mytrl",function($scope,$http){
+        $http({
+          method:"get",
+          url:"data/data.txt"
+        }).success(function(data){
+          $scope.data=data;
+        })
+      })
+    </script>
+
+###### 事件ng-click
+
+    <div ng-controller="mytrl">
+      <button ng-click="add()">+</button>
+      <span>{{number}}</span>
+      <button ng-click="sub()">-</button>
+    </div>
+    <script src="script/angular.js"></script>
+    <script>
+      var myapp=angular.module("app",[]);
+      myapp.controller("mytrl",function($scope){
+        $scope.number=0
+        $scope.add=function(){
+          ++$scope.number
+        }
+        $scope.sub=function(){
+          if($scope.number>0){
+            --$scope.number
+          }          
+        }
+      })
