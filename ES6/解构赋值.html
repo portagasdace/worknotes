@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script>
+	/*数组解构赋值*/
+		// let [num1,num2,num3] = [10,"hahha",true]
+		// let [num1,num2] = [10,"hahha"];
+		// [num1,num2] = [num2,num1];
+		// console.log(num1)
+		// console.log(num2)
+	/*对象解构赋值*/
+		// let {name,age}={name:"小名",age:30};
+		// console.log(name,age);
+	/*函数返回值解构赋值*/
+		function fun(){
+			var arr=["路飞","娜美"]
+			return arr
+		}
+		let [a,b]=fun();
+		// var a=fun()[0]
+		// var b=fun()[1]
+		console.log(a)
+		console.log(b)
+	</script>
+</body>
+</html>
