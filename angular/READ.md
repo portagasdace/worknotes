@@ -2,6 +2,24 @@
 
 ## angular 入门
 
+### mvc模型视图控制器
+
+    <body ng-app="">
+        <!-- 控制器 -->
+        <div ng-controller="mystrl">
+            <!-- 视图 -->
+            <h1>{{text}}</h1>
+        </div>
+        <script src="script/angular.js"></script>
+        <script>
+             var myapp=angular.module("app",[]);
+             myapp.controller("myctrl",function($scope){
+                <!-- 模型 -->
+                $scope.text="hello angular";
+              }) 
+        </script>
+    </body>
+
 ###### 用 ng-app指令管理下边的代码
 
     <body ng-app=""></body>
