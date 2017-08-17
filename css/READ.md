@@ -129,3 +129,9 @@
         background-repeat: no-repeat;
       }
     </style>
+
+#### css hack分类
+
++ 属性前缀法(即类内部Hack)：IE6能识别下划线" _ " 和 " * "，IE7能识别星号" * "，但不能识别下划线"_"，IE6~IE10都认识"\9"，但firefox前述三个都不能认识。
++ 选择器前缀法(即选择器Hack)：IE6能识别*html .class，IE7能识别*+html .class{}或者*:first-child+html .class{}。
++ IE条件注释法(即HTML条件注释Hack)：针对所有IE(注：IE10+已经不再支持条件注释)： IE浏览器显示的内容，针对IE6及以下版本：。这类Hack不仅对CSS生效，对写在判断语句里面的所有代码都会生效。

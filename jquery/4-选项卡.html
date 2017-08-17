@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		.content div{
+			width:298px;
+			height: 300px;
+			border: 1px solid #000;
+			display: none;
+		}
+		.content .active{
+			display: block;
+		}
+		.clear{
+			clear: both;
+		}
+		.tab li{
+			list-style: none;
+			width: 98px;
+			height: 30px;
+			text-align: center;
+			line-height: 30px;
+			border: 1px solid #aaa;
+			float: left;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<ul class="tab">
+		<li>内容一</li>
+		<li>内容二</li>
+		<li>内容三</li>
+	</ul>
+	<div class="content">
+		<div class="active">
+			<h1>内容一</h1>
+		</div>
+		<div>
+			<h1>内容二</h1>
+		</div>
+		<div>
+			<h1>内容三</h1>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<script src="script/jquery.js"></script>
+	<script>
+		$(".tab li").click(function(){
+			var index=$(this).index();
+			$(".content div").eq(index).addClass("active").siblings().removeClass("active")
+		})
+	</script>
+</body>
+</html>

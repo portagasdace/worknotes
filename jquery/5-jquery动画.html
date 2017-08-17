@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<button class="slidUp">上卷</button>
+	<button class="slidDown">下拉</button>
+	<button class="fadeIn">渐入</button>
+	<button class="fadeOut">渐出</button>
+	<button class="show">显示</button>
+	<button class="hide">隐藏</button>
+	<button class="togglehide">切换显示隐藏</button>
+	<button class="toggleslide">切换下拉上卷</button>
+	<button class="togglefade">切换渐入检出</button>
+	<div class="box"></div>
+	<script src="script/jquery.js"></script>
+	<script>
+		$(".slidUp").click(function(){
+			$(".box").slideUp()
+		})
+		$(".slidDown").click(function(){
+			$(".box").slideDown()
+		})
+		$(".show").click(function(){
+			$(".box").show(1000)
+		})
+		$(".hide").click(function(){
+			$(".box").hide(1000)
+		})
+		$(".fadeIn").click(function(){
+			$(".box").fadeIn()
+		})
+		$(".fadeOut").click(function(){
+			$(".box").fadeOut()
+		})
+		$(".togglehide").click(function(){
+			$(".box").toggle(500)
+		})
+		$(".togglefade").click(function(){
+			$(".box").fadeToggle(500)
+		})
+		$(".toggleslide").click(function(){
+			$(".box").slideToggle(500)
+		})
+	</script>
+</body>
+</html>

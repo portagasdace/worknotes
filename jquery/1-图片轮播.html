@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0px;
+			padding: 0px;
+		}
+		img{
+			width: 700px;
+			height: 450px;
+		}
+		ul{
+			height: 20px;
+		}
+		li{
+			list-style: none;
+			text-align: center;
+			width: 30px;
+			height: 20px;
+			line-height: 20px;
+			float: left;
+			border: 1px solid red;
+			cursor: pointer;
+		}
+		ul .active{
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<img src="img/0.jpg" alt="">
+	<ul>
+		<li class="active">1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+	</ul>
+	<script src="script/jquery.js"></script>
+	<script>
+		$("ul li").click(function(){
+			var index=$(this).index()
+			var src="img/"+ index+".jpg"
+			$("img").attr("src",src)
+			$(this).addClass("active").siblings().removeClass("active")
+		})
+	</script>
+</body>
+</html>

@@ -7,14 +7,14 @@
     <body ng-app="">
         <!-- 控制器 -->
         <div ng-controller="mystrl">
-            <!-- 视图 -->
+            <!-- h1标签视图 {{text}}模型-->
             <h1>{{text}}</h1>
         </div>
         <script src="script/angular.js"></script>
         <script>
              var myapp=angular.module("app",[]);
              myapp.controller("myctrl",function($scope){
-                <!-- 模型 -->
+                <
                 $scope.text="hello angular";
               }) 
         </script>
@@ -45,6 +45,23 @@
             }) 
       </script>
     </body>
+
+###### directive创建标签
+    
+    <body ng-app="mymodule">
+      <hello></hello>
+      <script src="script/angular.js"></script>
+      <script>
+        var mymodule=angular.module("mymodule",[])
+        mymodule.directive("hello",function(){
+          return {
+            restrict:"E",
+            template:"<div>hello angular</div>",
+            replace:true
+          }
+        })
+      </script>
+    </body>     
 
 ###### 绑定多个数据
 

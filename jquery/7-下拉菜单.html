@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		.tab>li{
+			list-style: none;
+			width: 100px;
+			height: 30px;
+			border: 1px solid red;
+			text-align: center;
+			line-height: 30px;
+			float: left;
+		}
+		.list{
+			display: none;
+			list-style: none;
+		}
+	</style>
+</head>
+<body>
+	<ul class="tab">
+		<li>
+			<a href="">书籍</a>
+			<ul class="list">
+				<li>js课程</li>
+				<li>js课程</li>
+				<li>js课程</li>
+				<li>js课程</li>
+			</ul>
+		</li>
+		<li>
+			<a href="">书籍</a>
+			<ul class="list">
+				<li>js课程</li>
+				<li>js课程</li>
+				<li>js课程</li>
+				<li>js课程</li>
+			</ul>
+		</li>
+		<li>
+			<a href="">书籍</a>
+			<ul class="list">
+				<li>js课程</li>
+				<li>js课程</li>
+				<li>js课程</li>
+				<li>js课程</li>
+			</ul>
+		</li>
+	</ul>
+	<script src="script/jquery.js"></script>
+	<script>
+		$(".tab>li").mouseenter(function(){
+			$(this).find(".list").stop().slideDown()
+		}).mouseleave(function(){
+			$(this).find(".list").stop().slideUp()
+		})
+	</script>
+</body>
+</html>

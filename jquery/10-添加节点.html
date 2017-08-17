@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text">
+	<button class="add">添加</button>
+	<ul>
+		<li>苹果</li>
+		<li>香蕉</li>
+		<li>茄子</li>
+	</ul>
+	<script src="script/jquery.js"></script>
+	<script>
+		$(".add").click(function(){
+			var value=$("input").val();
+			var $li="<li>"+value+"</li>"
+			// $("ul").prepend($li)
+			// $("ul li").eq(2).before($li)
+			$("ul li").eq(1).after($li)
+			$("ul li").click(function(){
+				$(this).remove()
+			})()
+		})
+		$("ul li").click(function(){
+			$(this).remove()
+		})
+	</script>
+</body>
+</html>

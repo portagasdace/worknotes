@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	</title>
+	<style>	
+		.small>ooimg{
+			width: 400px;	
+			height: 350px;
+		}
+	</style>
+</head>
+<body>
+	<div class="small">
+		<img src="img/0.jpg" alt="">
+		<img src="img/1.jpg" alt="">
+		<img src="img/2.jpg" alt="">
+	</div>
+	<div class="big"></div>
+	<script src="script/jquery.js"></script>
+	<script>
+		$(".small img").mouseenter(function(){
+			var src=$(this).attr("src");
+			console.log(src)
+			var img='<img src="'+src+'"/>';
+			$(".big").append(img)
+		})
+	</script>
+</body>
+</html>
