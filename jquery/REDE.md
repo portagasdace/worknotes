@@ -210,6 +210,7 @@ prev(), prevAll() 以及 prevUntil() 方法的工作方式与上面的方法类�
 +   prev()
 +   prevAll()
 +   prevUntil()
++   each(index,element)规定为每个匹配元素规定运行的函数。
 
 ###### JQuery过滤
 
@@ -232,3 +233,8 @@ prev(), prevAll() 以及 prevUntil() 方法的工作方式与上面的方法类�
 
 GET 基本上用于从服务器获得（取回）数据。注释：GET 方法可能返回缓存数据。
 POST 也可用于从服务器获取数据。不过，POST 方法不会缓存数据，并且常用于连同请求一起发送数据。
+
+#### this和$(this)的区别
+
+$(this)是jquery对象，能调用jquery的方法，例如click(), keyup()。
+而this,则是html元素对象，能调用元素属性，例如this.id,this.value。
