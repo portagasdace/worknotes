@@ -78,12 +78,22 @@
         }
     </style>
 
+#### 控制placeholder点击时候显示和隐藏
+  
+    placeholder=" 可对自身病情进行简单描述或填写其他疑问等" onfocus="this.placeholder=''" onblur="this.placeholder='可对自身病情进行简单描述或填写其他疑问等'
 #### 取消 bootstrap input点击之会出现蓝色边框
     input{
         outline:none;
         box-shadow:none;
     }
     <!--要覆盖bootstrap里的样式  -->
+
+#### 超出文本显示省略号
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:1;<!-- 控制行数 -->
+    overflow: hidden;
 
 #### ul 垂直居中div
 
