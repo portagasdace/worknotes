@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>辣椒视频</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="style/bootstrap.css">
+	<link rel="stylesheet" href="style/public.css">
+	<link rel="stylesheet" href="style/index.css">
+</head>
+<body>
+		<!-- logo -->
+		<div class="logo">
+			<img src="images/logo.png" alt="">
+		</div>
+		<!-- form表单 -->
+			<form action="">
+				<ul>
+					<li>
+						<input id="phone" type="text" name="tephone" placeholder=" &nbsp;请输入手机号" onfocus="this.placeholder=''" onblur="this.placeholder=' &nbsp;请输入手机号'">
+					</li>
+					<li>
+						<input class="inp" type="text" name="ma" placeholder=" &nbsp;请输入验证码" onfocus="this.placeholder=''" onblur="this.placeholder=' &nbsp;请输入验证码'">
+						<button class="getma" type="button" onclick="getCode(this)" id="J_getCode">获取验证码</button>
+						<button class="btn btn-small reset-code" id="J_resetCode" style="display:none;"><span id="J_second">60</span>秒后重发</button>
+					</li>
+					<input class="logoin" type="submit" value="登录">
+				</ul>
+				<p>注册：输入手机号，获取验证码登录，即可自动注册</p>
+			</form>
+		<!-- Modal --><!-- 模态框 -->
+		
+		<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+		    	<div class="modal-content">
+				    <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				        <h4 class="modal-title">请输入手机号</h4>
+				    </div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+		    	<div class="modal-content">
+				    <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				        <h4 class="modal-title">请输入正确手机号</h4>
+			   		</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/fontsizeset.js"></script>
+	<script>
+
+	var viewHeight = window.innerHeight; //获取可视区域高度
+	$("body").height(viewHeight)
+	function getCode(e){
+		checkPhone(); //验证手机号码
+		if(isPhone){
+			resetCode(); //倒计时
+		}else{
+			$('#phone').focus();
+		}
+		
+	}
+//验证手机号码
+function checkPhone(){
+	var phone = $('#phone').val();
+	var pattern = /^1[0-9]{10}$/;
+	isPhone = 1;
+	if(phone == '') {
+		$("#myModal1").modal()
+		isPhone = 0;
+		return;
+	}
+	if(!pattern.test(phone)){
+		$("#myModal").modal()
+		isPhone = 0;
+		return;
+	}
+}
+//倒计时
+function resetCode(){
+	$('#J_getCode').hide();
+	$('#J_second').html('60');
+	$('#J_resetCode').show();
+	var second = 60;
+	var timer = null;
+	timer = setInterval(function(){
+		second -= 1;
+		if(second >0 ){
+			$('#J_second').html(second);
+		}else{
+			clearInterval(timer);
+			$('#J_getCode').show();
+			$('#J_resetCode').hide();
+		}
+	},1000);
+}
+
+	</script>
+</body>
+</html>

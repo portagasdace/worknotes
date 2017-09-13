@@ -60,6 +60,13 @@
     }
     </style>
 
+#### 首航缩进
+
+    text-indent: 2em;
+
+#### 背景渐变
+
++ 从上到下  background: linear-gradient(0deg, #e0e0e0, #fff);
 #### 更改placeholder默认字体大小和颜色
 
     <input type="text"  placeholder="输入用户名">
