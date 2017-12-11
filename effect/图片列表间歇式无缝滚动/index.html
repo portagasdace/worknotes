@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>cxScroll 带按钮间歇式图片无缝滚动效果- 聚合素材网演示页www.juheweb.com</title>
+<style>
+body,h1,h2,h3,ul,li,p{margin:0;padding:0;}
+body{font:14px/1.7 Arial,"\5b8b\4f53";}
+h1,h2,h3{font:bold 36px/2 "\5fae\8f6f\96c5\9ed1";}
+h1{padding:0 20px;background:#333;color:#fff;}
+h2{font-size:20px;}
+h3{font-size:16px;}
+ul{list-style-type:none;}
+.wrap{padding:20px;}
+
+/* 水平滚动
+------------------------------ */
+.scroll_horizontal{position:relative;width:660px;height:120px;padding:20px;line-height:20px;background:#000;}
+.scroll_horizontal .box{overflow:hidden;position:relative;width:600px;height:120px;margin:0 auto;}
+.scroll_horizontal .list{overflow:hidden;width:9999px;}
+.scroll_horizontal .list li{float:left;width:200px;text-align:center;}
+/*.scroll_horizontal .plus,
+.scroll_horizontal .minus{position:absolute;top:50px;width:30px;height:60px;background:#f90;cursor:pointer;}
+.scroll_horizontal .plus{left:10px;}
+.scroll_horizontal .minus{right:10px;}
+.scroll_horizontal .plus:hover,
+.scroll_horizontal .minus:hover{background:#f60;}*/
+
+/* 垂直滚动
+------------------------------ */
+/*.scroll_vertical{position:relative;width:180px;height:340px;padding:20px;line-height:20px;background:#000;}
+.scroll_vertical .box{overflow:hidden;position:relative;height:280px;margin:40px 0 0 0;}
+.scroll_vertical .plus,
+.scroll_vertical .minus{position:absolute;left:50px;width:120px;height:30px;background:#09f;cursor:pointer;}
+.scroll_vertical .plus{top:10px;}
+.scroll_vertical .minus{bottom:10px;}
+.scroll_vertical .plus:hover,
+.scroll_vertical .minus:hover{background:#0cf;}
+.scroll_vertical ul{position:absolute;top:0;left:0;}
+.scroll_vertical li{height:140px;text-align:center;}*/
+</style>
+</head>
+<body>
+<!--<h1>jQuery cxScroll 间歇式无缝滚动</h1>-->
+<center>
+<div class="wrap">
+<!--	<h2>横向滚动[right]</h2>-->
+	<div id="pic_list_1" class="scroll_horizontal">
+		<div class="box">
+			<ul class="list">
+				<li><a href="http://www.juheweb.com" target="_blank"><img src="img/temp_pic_1.jpg"></a></li>
+				<li><a href="http://www.juheweb.com" target="_blank"><img src="img/temp_pic_2.jpg"></a></li>
+				<li><a href="http://www.juheweb.com" target="_blank"><img src="img/temp_pic_3.jpg"></a></li>
+				<li><a href="http://www.juheweb.com" target="_blank"><img src="img/temp_pic_4.jpg"></a></li>
+				<li><a href="http://www.juheweb.com" target="_blank"><img src="img/temp_pic_5.jpg"></a></li>
+			</ul>
+		</div>
+	</div>
+<!--
+	<h2>横向滚动[left]</h2>
+	<div id="pic_list_2" class="scroll_horizontal">
+		<div class="box">
+			<ul class="list">
+				<li><a href="http://www.juheweb.com" target="_blank"><img src="img/temp_pic_1.jpg"></a></li>
+				<li><a href="http://www.juheweb.com" target="_blank"><img src="img/temp_pic_2.jpg"></a></li>
+				<li><a href="http://www.juheweb.com" target="_blank"><img src="img/temp_pic_3.jpg"></a></li>
+				<li><a href="http://www.juheweb.com" target="_blank"><img src="img/temp_pic_4.jpg"></a></li>
+				<li><a href="http://www.juheweb.com" target="_blank"><img src="img/temp_pic_5.jpg"></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<h2>垂直滚动[bottom]</h2>
+	<div id="pic_list_3" class="scroll_vertical">
+		<div class="box">
+			<ul class="list">
+				<li><a href="http://www.juheweb.com" target="_blank"><img src="img/temp_pic_1.jpg"></a></li>
+				<li><a href="http://www.juheweb.com" target="_blank"><img src="img/temp_pic_2.jpg"></a></li>
+				<li><a href="http://www.juheweb.com" target="_blank"><img src="img/temp_pic_3.jpg"></a></li>
+				<li><a href="http://www.juheweb.com" target="_blank"><img src="img/temp_pic_4.jpg"></a></li>
+				<li><a href="http://www.juheweb.com" target="_blank"><img src="img/temp_pic_5.jpg"></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<h2>垂直滚动[top]</h2>
+	<div id="pic_list_4" class="scroll_vertical">
+		<div class="box">
+			<ul class="list">
+				<li><a href="http://www.juheweb.com" target="_blank"><img src="img/temp_pic_1.jpg"></a></li>
+				<li><a href="http://www.juheweb.com" target="_blank"><img src="img/temp_pic_2.jpg"></a></li>
+				<li><a href="http://www.juheweb.com" target="_blank"><img src="img/temp_pic_3.jpg"></a></li>
+				<li><a href="http://www.juheweb.com" target="_blank"><img src="img/temp_pic_4.jpg"></a></li>
+				<li><a href="http://www.juheweb.com" target="_blank"><img src="img/temp_pic_5.jpg"></a></li>
+			</ul>
+		</div>
+	</div>-->
+</div>
+</center>
+<script src="js/jquery-1.4.4.min.js"></script>
+<script src="js/jquery.cxscroll.js"></script>
+<script>
+$("#pic_list_1").cxScroll();
+/*$("#pic_list_2").cxScroll({direction:"left",step:3});
+$("#pic_list_3").cxScroll({direction:"bottom",speed:500,time:1500,plus:false,minus:false});
+$("#pic_list_4").cxScroll({direction:"top",auto:false});*/
+</script>
+<!--以下代码不作为插件效果内容 -->
+<!--<style>.jhp{ padding:5px 0px; text-align:center; font-size:12px;clear:both; margin:0px; }.d_foot_o{ text-align:center; margin:35px 0 10px 0 ;clear:both; }</style>-->
+<!--
+<div class="d_foot_o">标题：<a href="http://www.juheweb.com/js/gddm/182.html" title="">jQuery cxScroll 图片列表间歇式无缝滚动</a>&nbsp;&nbsp;&nbsp;栏目分类：<a href="http://www.juheweb.com/js/gddm/" target="_blank" title="滚动代码" class="lm">滚动代码</a>&nbsp;&nbsp;&nbsp;素材整理：<a href="http://www.juheweb.com">聚合分享</a>&nbsp;&nbsp;&nbsp;下载：<a href="http://www.juheweb.com/js/gddm/182.html" title="立即下载">立即下载</a></div><p class="jhp">&#12288;本代码仅限于学习交流，请勿用于商业用途! </p><p class="jhp">声明:聚合分享素材网代码来源于互联网,精心整理,转载请注明出处!</p>-->
+</body>
+</html>

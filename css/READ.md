@@ -67,6 +67,19 @@
 #### 背景渐变
 
 + 从上到下  background: linear-gradient(0deg, #e0e0e0, #fff);
+
+#### 字体渐变
+
+    background: -webkit-linear-gradient(top,#003226,#51d8b6 50%, #003226);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none !important;
+
+#### input阴影
+
+    box-shadow: inset 0 0 0.06rem #a7a7a7;
+    border: 0.005rem solid #a7a7a7;
+
 #### 更改placeholder默认字体大小和颜色
 
     <input type="text"  placeholder="输入用户名">

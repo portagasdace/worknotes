@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+</head>
+
+<!--两种效果都需要jquery.s-->
+<script type="text/javascript" src="jquery.js"></script>
+
+<!--banner切换效果--><script type="text/javascript" src="jquery.SuperSlide.2.1.1.js"></script><!---->
+
+向上滚动效果<script type="text/javascript" src="kxbdSuperMarquee.js"></script>
+<style>
+#banner1 { width:100%; height:480px; margin:0px auto; overflow:hidden; position:relative; clear:both}
+#banner1_01 { height:480px; margin:0px auto; overflow:hidden; }
+.banner1_011 { margin:0 auto; overflow:hidden; }
+.banner1_011 img{ margin:0 auto; display:block; border:0px;}
+#icon_num1 { position:absolute; width:980px; bottom:10px; left:50%; margin-left:-490px; }
+#icon_num1 ul { float:right; }
+#icon_num1 li { float:left; background:#afadab; width:20px; height:10px; overflow:hidden; list-style:none; cursor:pointer; margin-right:5px; text-indent:-999em; }
+#icon_num1 li:hover, #icon_num1 li.active { background:#e3a648; }
+#icon_num1 li:hover, #icon_num1 li.on { background:#e3a648; }
+
+</style>
+<!--向上滚动效果样式-->
+<style>
+ .rim1{ height:257px; overflow:hidden; width:313px; margin:0 auto; font-size:14px;}
+ .rim1 li{ line-height:43px; height:43px; overflow:hidden; width:272px; overflow:hidden;}
+ .rim1 li b{color:#ff0000}
+.rim_li{ background:#efeeee;}
+
+</style>
+<body>
+<div id="banner1">
+    <div id="show_pic">
+        <div id="banner1_01">
+            <div class="tp">
+                <a href="#" target="_blank">
+                    <img src="images/tp27.jpg"/>
+                </a>
+                <p>教学环境</p>
+            </div>
+        </div>
+        
+        <div id="banner1_01">
+            <div class="tp">
+                <a href="#" target="_blank">
+                    <img src="images/tp27.jpg"/>
+                </a>
+                <p>教学环境</p>
+            </div>
+        </div>
+        
+    </div>
+
+ <div id="icon_num1">
+        <ul>
+            <li class="on"></li>
+            <li></li>
+        </ul>
+    </div>
+</div>
+<script>
+	jQuery("#banner1").slide({titCell:"#icon_num1 ul",mainCell:"#show_pic",autoPage:true,effect:"left",autoPlay:true,vis:1,delayTime:1000,interTime:3000});
+</script>
+
+
+<!--<div id="banner1">
+    <div id="show_pic">
+        <div id="banner1_01">
+            <div class="banner1_011" style="background:url(images/banner_bj.jpg) no-repeat top center">
+                <a href="/swt/" target="_blank">
+                <img src="images/banner.jpg" class="fl">
+                </a> 
+            </div>
+        </div>
+        
+        <div id="banner1_01">
+            <div class="banner1_011" style="background:url(images/banner_bj1.jpg) no-repeat top center">
+                <a href="/swt/" target="_blank">
+                    <img src="images/banner1.jpg" class="fl" >
+                </a> 
+            </div>
+        </div>
+        
+    </div>
+
+ <div id="icon_num1">
+        <ul>
+            <li class="on"></li>
+            <li></li>
+        </ul>
+    </div>
+</div>-->
+<!--
+<script>
+	jQuery("#banner1").slide({titCell:"#icon_num1 ul",mainCell:"#show_pic",autoPage:true,effect:"left",autoPlay:true,vis:1,delayTime:1000,interTime:3000});
+</script>
+-->
+
+
+
+<div class="rim1">
+    <ul>
+		<li><span style="float:left">王先生</span>  <b>扁平苔藓</b><span style="float:right">上海市南汇区</span></li>
+        <li><span style="float:left">林先生</span>  <b>口腔白斑</b><span style="float:right">上海市普陀区</span></li>
+        <li><span style="float:left">王先生</span>  <b>口腔溃疡</b><span style="float:right">上海市青浦区</span></li>
+        <li><span style="float:left">张小姐</span>  <b>白塞氏病</b><span style="float:right">上海市闵行区</span></li>
+        <li><span style="float:left">王先生</span>  <b>扁平苔藓</b><span style="float:right">上海市普陀区</span></li>
+        <li><span style="float:left">赵女士</span>  <b>口腔白斑</b><span style="float:right">上海市闵行区</span></li>
+        <li><span style="float:left">贾先生</span>  <b>口腔溃疡</b><span style="float:right">上海市青浦区</span></li>
+        <li><span style="float:left">王先生</span>  <b>扁平苔藓</b><span style="float:right">上海市普陀区</span></li>
+        <li><span style="float:left">李小姐</span>  <b>白塞氏病</b><span style="float:right">上海市闵行区</span></li>
+		
+		
+		
+		</ul>
+</div>
+<A href="/swt/" target="_blank"><div class="yygh">我也要挂号在线预约</div></A>
+<script type="text/javascript">
+	  $(function(){$(".rim1").kxbdSuperMarquee({distance:43,time:3,direction:'up'});})
+</script>
+
+</body>
+</html>
