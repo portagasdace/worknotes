@@ -6,7 +6,7 @@
 			</div>
 			<div class="nav">
 				<ul class="list">
-					<li v-for="(item,index) in lists" >
+					<li v-for="item in lists" >
 						<router-link :to="{path:item.path}">{{item.label}}</router-link>
 					</li>
 				</ul>

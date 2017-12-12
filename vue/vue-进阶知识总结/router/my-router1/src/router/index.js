@@ -1,15 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Index from '@/components/index'
-import About from '@/components/about'
-import Team from '@/components/team'
-import Course from '@/components/courses'
-import Lianxi from '@/components/lianxi'
+import Index from '@/pages/index'
+import About from '@/pages/about'
+import Team from '@/pages/team'
+import Course from '@/pages/courses'
+import Lianxi from '@/pages/lianxi'
 
 Vue.use(Router)
 
 export default new Router({
-  mode:"history",
   routes: [
     {
       path: '/',
