@@ -8,11 +8,14 @@
 export default {
   data () {
     return {
-      msg: 'index'
+      msg: '首页'
     }
   }
 }
 </script>
 <style scoped>
-
+.hello{
+	height:60px;
+	overflow: hidden;
+}
 </style>

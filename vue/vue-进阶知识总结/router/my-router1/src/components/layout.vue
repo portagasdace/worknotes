@@ -12,13 +12,22 @@
 				</ul>
 			</div>
 		</div>
-		<div class="content"></div>
-		<div class="footer"></div>
-		<router-view></router-view>
+		<div class="content">
+			<center-content></center-content>
+		</div>
+		<div class="footer">
+			<div class="footer-inner">
+				
+			</div>
+		</div>
 	</div>
 </template>
 <script>
+	import CenterContent from "./content"
 	export default{
+		components:{
+			CenterContent
+		},
 		data(){
 			return{
 				lists:[
@@ -94,5 +103,21 @@
 	}
 	.active{
 		background:#e3bc05;
+	}
+	.content{
+		width:100%;
+		overflow: hidden;
+	}
+	.footer{
+		width:100%;
+		overflow: hidden;
+		background:#000;
+		position:relative;
+		bottom:0;
+	}
+	.footer-inner{
+		width:1000px;
+		margin:0 auto;
+		height:80px;	
 	}
 </style>
